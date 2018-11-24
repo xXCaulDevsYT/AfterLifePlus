@@ -10,7 +10,7 @@ Fully featured kill/death scoring plugin plus custom death event
  - [ ] Add commands to easialy change settings in config
  - [ ] Add Level up timer `(level up over time, so stay online to level up!)`
  
-# Custom Event
+### Custom Event
 The custom event is simple, it disables the title screen to prevent accedendal quit to menu ;)
 ```yml
 # config.yml
@@ -18,7 +18,7 @@ The custom event is simple, it disables the title screen to prevent accedendal q
 death-method: "custom"
 ```
 
-# Commands
+### Commands
 ```yml
 stats: 
     description: "Shows PvP Stats '/stats or /stats <player>'"
@@ -27,7 +27,7 @@ setleaderboard:
     description: setsleader board that displays player stats (floating texts)
 ```
 
-# Full Config
+### Full Config
 ```yml
 #Set world to what world you want the texts to spawn in. Currently only supports one world.
 #enable floating texts.
