@@ -1,10 +1,16 @@
-# AfterLife Features
-Fully featured kill/death scoring plugin plus custom death event
+# AfterLifePlus Features
+Fully Featured KitPvP Custom Scoring And Stats Tracking Plugin!
 
+### Original Edition
+[Download Here](https://github.com/Aurora-Development/AfterLife)
+
+### Plus Edition
+[Download Here](https://github.com/xXCaulDevsYT/AfterLifePlus)
 
 ![Total downloads](https://img.shields.io/badge/downloads-1-blue.svg)
 ![Total views](https://img.shields.io/badge/views-15-blue.svg)
 
+### To Do List
  - [x] Score points on Kill! `(+ gain xp)`
  - [x] Losse xp on Death!
  - [x] Calculates kill/death ratio 
@@ -13,6 +19,12 @@ Fully featured kill/death scoring plugin plus custom death event
  - [x] Enable floating texts to see leaderboard of stats `(see commands)`
  - [ ] Add commands to easialy change settings in config
  - [ ] Add Level up timer `(level up over time, so stay online to level up!)`
+ - [ ] Add Minutes Spent In Combat Leaderboards `(Plus Edition Only)`
+ - [ ] Add Top XP Leaderboards `(Plus Edition Only)`
+ - [ ] Add Longest Bow Kills & Hits Leaderboards `(Plus Edition Only)`
+ - [ ] Add Kill Rewards `(Plus Edition Only)`
+ - [ ] Add Levels Into PurePerms Prefix `(Plus Edition Only)`
+ - [ ] Add Custom Eventing for Kills & Deaths `(Plus Edition Only)`
  
 ### Custom Event
 The custom event is simple, it disables the title screen to prevent accedendal quit to menu ;)
@@ -28,7 +40,7 @@ stats:
     description: "Shows PvP Stats '/stats or /stats <player>'"
     
 setleaderboard: 
-    description: setsleader board that displays player stats (floating texts)
+    description: sets leader board that displays player stats (floating texts)
 ```
 
 ### Full Config
@@ -90,5 +102,8 @@ loose-level-xp-amount: 10
 #how much xp is required for level up
 xp-levelup-ammount: 1000
 ```
-## 💰 Credits
-Icon made by Freepik from www.flaticon.com is licensed by CC 3.0 BY
+## Developers
+1. @cosmicAtom (Original Author)
+2. @iShabbz102 (Original Author)
+3. @xXCaulDevsYT (Plus Edition Author)
+
