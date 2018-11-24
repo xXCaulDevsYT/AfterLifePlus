@@ -78,8 +78,6 @@ class Main extends PluginBase implements Listener {
         $this->getLogger()->notice(color::GOLD . count(array_keys($this->texts->getAll())) . " floating texts loaded!");
 	}
 
-
-
 	/**
      * Initializes Floating Texts.
      * @param Vector3 $location
@@ -97,7 +95,7 @@ class Main extends PluginBase implements Listener {
 
 	public function onCommand (CommandSender $player, Command $cmd, string $label, array $args):bool {
 		if ($player instanceof Player) {
-			if ($cmd == "profile" xor $cmd == "stats") {
+			if ($cmd == "profile" || $cmd == "stats") {
 				if (!isset($args[0])) {
 					$this->getStats($player);
 				} else {
@@ -110,37 +108,30 @@ class Main extends PluginBase implements Listener {
 				}
 			}
 
-
-
-
-
 			if ($this->config->get("texts-enabled") == true) {
-				if ($cmd == "setleaderboard") {
-					if (isset($args[0])) {
-						if (in_array($args[0], ["levels", "kills", "kdr", "streaks"])) {
+				if ($player->hasPermission('afterlife.admin')) {
+					if ($cmd == "setleaderboard") {
+						if (isset($args[0])) {
+							if (in_array($args[0], ["levels", "kills", "kdr", "streaks"])) {
 
-							$possition = implode("_", [round($player->getX(), 2), round($player->getY(), 2) + 1.7, round($player->getZ(), 2)]);
-							$this->texts->set($possition, $args[0]);
-							$this->texts->save();
-							$possition = $player->asVector3();
-							$this->addText($possition, $args[0], null);
-							$player->sendMessage(color::RED.$args[0].color::YELLOW." leaderboard created!");
+								$possition = implode("_", [round($player->getX(), 2), round($player->getY(), 2) + 1.7, round($player->getZ(), 2)]);
+								$this->texts->set($possition, $args[0]);
+								$this->texts->save();
+								$possition = $player->asVector3();
+								$this->addText($possition, $args[0], null);
+								$player->sendMessage(color::RED.$args[0].color::YELLOW." leaderboard created!");
 
-						} elseif ((in_array($args[0], ["del", "remove", "delete"]))) {
+							} elseif ((in_array($args[0], ["del", "remove", "delete"]))) {
 
+							}
+						} else {
+							$player->sendMessage(color::RED . "Please choose \n ---kills, \n ---levels, \n ---kdr, \n ---streaks, \nor delete");
 						}
-					} else {
-						$player->sendMessage(color::RED . "Please choose \n ---kills, \n ---levels, \n ---kdr, \n ---streaks, \nor delete");
 					}
+				} else {
+					$player->sendMessage(color::RED."You donot have permission to run this command!");
 				}
 			}
-
-
-
-
-
-
-
 		} else {
 			$player->sendMessage("Run commands in-game");
 		}
@@ -174,9 +165,6 @@ class Main extends PluginBase implements Listener {
 						color::RED."\nExperience: ".color::BLUE.$this->getXp($player->getName())."\n\n\n\n\n");
 					$form->addButton(color::BOLD. "Exit");
 					$form->sendToPlayer($player);
-
-
-
 				} else {
 					$player->sendMessage(color::LIGHT_PURPLE."Please enable FormAPI else use 'stardard' in config!");
 				}
@@ -330,9 +318,6 @@ class Main extends PluginBase implements Listener {
 		$data = new GetData($this, $type);
 		return $data->getData($type);
 	}
-
-
-
 
 
 	/**
