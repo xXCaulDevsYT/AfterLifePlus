@@ -19,8 +19,8 @@ death-method: "custom"
 # Commands
 ```yml
 stats: 
-    description: "Shows PvP Stats"
+    description: "Shows PvP Stats '/stats or /stats <player>'"
     
 setleaderboard: 
-    description: sets leader board that displays player stats
+    description: setsleader board that displays player stats (floating texts)
 ```
