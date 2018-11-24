@@ -1,8 +1,9 @@
 # AfterLife Features
+Fully featured kill/death scoring plugin plus custom death event
+
+
 ![Total downloads](https://img.shields.io/badge/downloads-1-blue.svg)
 ![Total views](https://img.shields.io/badge/views-15-blue.svg)
-
-Fully featured kill/death scoring plugin plus custom death event
 
  - [x] Score points on Kill! `(+ gain xp)`
  - [x] Losse xp on Death!
