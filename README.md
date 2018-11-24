@@ -86,3 +86,5 @@ loose-level-xp-amount: 10
 #how much xp is required for level up
 xp-levelup-ammount: 1000
 ```
+## 💰 Credits
+Icon made by Freepik from www.flaticon.com is licensed by CC 3.0 BY
