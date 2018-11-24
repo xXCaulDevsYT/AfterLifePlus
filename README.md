@@ -34,7 +34,7 @@ setleaderboard:
 texts-enabled: true
 texts-world: "lobby"
 
-#how many players to display
+#how many players to display on leaderboard
 texts-top: 5
 
 #setts the title for each leaderboard
